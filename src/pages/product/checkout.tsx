@@ -17,12 +17,10 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import { useRouter } from "next/router";
 import { useState } from "react";
 
 export default function Checkout() {
   const [hasSeenPrompt, setHasSeenPrompt] = useState<boolean>(false);
-  const router = useRouter();
   const toast = useNuggetsToast();
 
   const handleOnClick = () => {

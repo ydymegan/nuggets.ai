@@ -1,4 +1,6 @@
 import { Box, Image, Link, Stack, Text } from "@chakra-ui/react";
+import { useState } from "react";
+import { useNuggetsToast } from "./NuggetsToast";
 
 interface NuggetsImageCardProps {
   imgSrc: string;
@@ -6,6 +8,22 @@ interface NuggetsImageCardProps {
 
 export const NuggetsImageCard = (props: NuggetsImageCardProps) => {
   const { imgSrc } = props;
+
+  const [count, setCount] = useState<number>(0);
+  const toast = useNuggetsToast();
+
+  const handleOnClick = () => {
+    if ((count + 1) % 10 === 0) {
+      toast({
+        variant: "error",
+        description:
+          "Did you want to find out more details on the product? Click the product name to find out more!",
+      });
+    }
+    setCount(count + 1);
+  };
+
+  console.log(count);
 
   /**
    * mock data
@@ -47,6 +65,7 @@ export const NuggetsImageCard = (props: NuggetsImageCardProps) => {
         borderColor="nuggets.sageGreen"
         borderRadius="4px"
         width="max-content"
+        onClick={() => handleOnClick()}
       >
         <Image
           boxSize="350px"

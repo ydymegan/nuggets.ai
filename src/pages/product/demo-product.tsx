@@ -14,9 +14,7 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import { useEffect } from "react";
 import { useNuggetsToast } from "@/app/components/NuggetsToast";
-import { delay } from "framer-motion";
 
 export default function DemoProduct() {
   const router = useRouter();
