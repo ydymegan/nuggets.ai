@@ -1,6 +1,6 @@
 import { Box, HStack, Stack, Text } from "@chakra-ui/react";
-import { NavigationLayout } from "./components/NavigationLayout";
-import { NuggetsImageCard } from "./components/NuggetsImageCard";
+import { NavigationLayout } from "./NavigationLayout";
+import { NuggetsImageCard } from "./NuggetsImageCard";
 
 export const Landing = () => {
   return (
@@ -16,7 +16,7 @@ export const Landing = () => {
           </Text>
           <Text textStyle="body" textAlign="center" w="70%">
             Floral Mist, Active Serums, Fortifying CBD moisturizer, In&Out
-            Nurturing phytho oil. All our formulas have been created to optimize
+            Nurturing phyto oil. All our formulas have been created to optimize
             the natural strength of all skin types, even the most sensitive.
           </Text>
         </Stack>
