@@ -8,9 +8,9 @@ import {
   UseToastOptions,
 } from "@chakra-ui/react";
 import { useMemo } from "react";
-import { MdClose, MdInfo, MdWarning } from "react-icons/md";
+import { MdInfo, MdWarning } from "react-icons/md";
 
-export function useArcToast(
+export function useNuggetsToast(
   options?: UseToastOptions
 ): ReturnType<typeof useToast> {
   const cachedOptions = useMemo<UseToastOptions>(
@@ -41,10 +41,9 @@ interface NuggetsToastProps {
   onClose?: () => void;
 }
 export const NuggetsToast = (props: NuggetsToastProps) => {
-  const { options, onClose } = props;
+  const { options } = props;
 
   let icon = undefined;
-
   let bgColor = undefined;
   let borderColor = undefined;
 
@@ -56,14 +55,14 @@ export const NuggetsToast = (props: NuggetsToastProps) => {
       break;
     }
     case "warning": {
-      bgColor = "#FDF5F3";
-      borderColor = "#D74A3233";
-      icon = <Icon as={MdWarning} w="21px" h="18px" color="#D74A32" />;
+      bgColor = "#FFFBF2";
+      borderColor = "#E0A10033";
+      icon = <Icon as={MdWarning} w="21px" h="18px" color="#E0A100" />;
       break;
     }
     case "error": {
-      bgColor = "#FFFBF2";
-      borderColor = "#E0A10033";
+      bgColor = "#FDF5F3";
+      borderColor = "#D74A3233";
       icon = <Icon as={MdWarning} w="21px" h="18px" color="#D74A32" />;
       break;
     }
@@ -76,8 +75,7 @@ export const NuggetsToast = (props: NuggetsToastProps) => {
       borderColor={borderColor}
       borderRadius="4px"
       color="nuggets.sageGreen"
-      px={6}
-      py={4}
+      p={4}
       spacing={4}
       alignItems="flex-start"
     >
@@ -91,24 +89,11 @@ export const NuggetsToast = (props: NuggetsToastProps) => {
           </Text>
         )}
         {options?.description && (
-          <Text textStyle="body" fontSize="13px">
+          <Text textStyle="body" fontSize="16px">
             {options.description}
           </Text>
         )}
       </Stack>
-      {onClose && (
-        <Box w="24px" h="24px" ml={1} display="flex" alignItems="start">
-          <Icon
-            as={MdClose}
-            h="20px"
-            w="20px"
-            cursor="pointer"
-            onClick={() => {
-              onClose();
-            }}
-          />
-        </Box>
-      )}
     </HStack>
   );
 };

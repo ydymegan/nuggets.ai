@@ -6,13 +6,13 @@ export const theme = extendTheme({
       brown: "#482216",
       peach: "#DAA38B",
       beige: "#FEEBCA",
-      olive: "#908660",
+      olive: "#444929",
       sageGreen: "#4D4B30",
     },
   },
   fonts: {
-    heading: "Open Sans Bold",
-    body: "Open Sans Regular",
+    heading: "Publico Bold",
+    body: "Roboto Regular",
   },
   styles: {
     global: {
@@ -40,7 +40,7 @@ export const theme = extendTheme({
       fontSize: "15px",
       fontWeight: 400,
       lineHeight: "150%",
-      color: "nuggets.sageGreen",
+      color: "nuggets.olive",
     },
   },
 });
