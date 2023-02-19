@@ -1,9 +1,11 @@
-import { Stack, Text } from "@chakra-ui/react";
+import { Box, Stack, Text } from "@chakra-ui/react";
 
 export const Landing = () => {
   return (
-    <Stack>
-      <Text>test</Text>
-    </Stack>
+    <Box p={6} bgColor="nuggets.beige" h="100hv">
+      <Stack>
+        <Text>test</Text>
+      </Stack>
+    </Box>
   );
 };
